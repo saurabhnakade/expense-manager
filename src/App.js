@@ -1,4 +1,5 @@
 import Expenses from "./components/Expenses/Expenses";
+import NewExpense from "./components/NewExpense/NewExpense";
 
 const App = () => {
   const expenses = [
@@ -23,8 +24,14 @@ const App = () => {
     },
   ];
 
+  const addExpenseHandler=(expense)=>{
+    console.log(expense)
+    console.log("JIKLAS")
+  }
+
   return (
     <div className="App">
+      <NewExpense onAddExpense={addExpenseHandler}/>
       <Expenses items={expenses} />
     </div>
   );
